@@ -1,0 +1,129 @@
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+}
+
+.form-toggle {
+    display: flex;
+    background: #f4f4f4;
+    border-bottom: 2px solid #ddd;
+}
+
+.toggle-button {
+    flex: 1;
+    padding: 12px 0;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transition: background 0.3s, color 0.3s;
+}
+
+.toggle-button.active {
+    background: #6a5acd;
+    color: #fff;
+    font-weight: bold;
+}
+
+.toggle-button:not(.active):hover {
+    background: #eee;
+}
+
+.form-content {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #6a5acd;
+}
+
+.form-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background: #6a5acd;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-button:hover {
+    background: #836fff;
+}
+
+.forgot-password {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #6a5acd;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.forgot-password:hover {
+    color: #836fff;
+}
+
+.social-login {
+    margin: 20px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.social-button.google {
+    background: #db4437;
+}
+
+.social-button.apple {
+    background: #333;
+}
+
+.social-button:hover {
+    opacity: 0.9;
+}
