@@ -85,9 +85,11 @@ body, html {
     background-color: #ffffff;
     color: rgb(143, 39, 39);
     padding: 2rem;
+    font-family: 'Times New Roman', Times, serif;
     border: none;
     border-radius: 10px;
     font-size: 1rem;
+    font-size:larger;
     font-weight: bold;
     text-transform: capitalize;
     cursor: pointer;
