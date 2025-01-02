@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  background-color: rgb(63, 248, 26);
+  color: rgb(39, 38, 38);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(235, 47, 47);
+}
+

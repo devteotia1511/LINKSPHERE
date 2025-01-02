@@ -44,7 +44,7 @@ const LoginSignup = () => {
           </form>
 
           <div className="social-login">
-            <p>Or login with</p>
+            <p >Or login with</p>
             <div className="social-icons">
               <button className="social-button google">
                 <FaGoogle /> Google

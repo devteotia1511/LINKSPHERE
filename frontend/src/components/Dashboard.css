@@ -1,0 +1,74 @@
+.dashboard {
+    font-family: Arial, sans-serif;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .profile-icon {
+    cursor: pointer;
+  }
+  
+  .profile-menu {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+  
+  .profile-menu button {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .profile-menu button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .main-content {
+    padding: 20px;
+  }
+  
+  .past-works {
+    margin-top: 20px;
+  }
+  
+  .work-blocks {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .work-block {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .work-block h3 {
+    font-size: 18px;
+  }
+  
+  .work-block p {
+    font-size: 14px;
+    color: #555;
+  }

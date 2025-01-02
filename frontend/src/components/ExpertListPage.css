@@ -1,0 +1,27 @@
+.expert-list-page {
+    padding: 2rem;
+    text-align: center;
+  }
+  .expert-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .expert-card {
+    background: #abaaaa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(231, 110, 110, 0.1);
+  }
+  .expert-card h2 {
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(1, 40, 106);
+    margin-bottom: 0.5rem;
+  }
+  .expert-card p {
+    margin: 0.3rem 0;
+  }

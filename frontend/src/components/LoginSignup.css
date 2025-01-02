@@ -98,6 +98,11 @@ input:focus {
     margin: 20px 0;
 }
 
+.social-login p{
+    color: gray;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
 .social-icons {
     display: flex;
     justify-content: center;
