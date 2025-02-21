@@ -172,3 +172,38 @@ body, html {
     color: #333;
     cursor: pointer;
   }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: #515050;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    text-align: center;
+  }
+
+  .popup-content h2{
+    color: #0555ab;
+    padding-bottom: 30px;
+    font-size: larger;
+    font-weight: bold;
+  }
+  
+  .popup-checkbox {
+    margin: 15px;
+    text-align: left;
+  }
+  
+  .popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }

@@ -34,6 +34,7 @@
 
 .toggle-button:not(.active):hover {
     background: #eee;
+    color:#6a5acd ;
 }
 
 .form-content {
@@ -92,6 +93,7 @@ input:focus {
 
 .forgot-password:hover {
     color: #836fff;
+    background-color: white;
 }
 
 .social-login {

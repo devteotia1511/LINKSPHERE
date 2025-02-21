@@ -1,28 +1,28 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-const cookieParser = require("cookie-parser");
-const cors = require("cors");
+import express, { json } from "express";
+import { connect, Schema, model } from "mongoose";
+import { hash, compare } from "bcryptjs";
+import { sign, verify } from "jsonwebtoken";
+import cookieParser from "cookie-parser";
+import cors from "cors";
 
 const app = express();
 
-app.use(express.json());
+app.use(json());
 app.use(cookieParser());
 app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://devteotia1511:EKTWsjsZFVVGiqBu@cluster0.i452v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+connect('mongodb+srv://devteotia1511:EKTWsjsZFVVGiqBu@cluster0.i452v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => console.log("MongoDB connected"))
     .catch(err => console.log(err));
 
 // User Schema and Model
-const userSchema = new mongoose.Schema({
+const userSchema = new Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
 });
 
-const User = mongoose.model("User", userSchema);
+const User = model("User", userSchema);
 User.create({
     email:"devteotia1511@gmail.com",
     password:"456789765435"
@@ -35,7 +35,7 @@ app.post("/api/register", async (req, res) => {
 
     if (!email || !password) return res.status(400).json({ message: "All fields are required." });
 
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await hash(password, 10);
 
     const newUser = new User({ email, password: hashedPassword });
 
@@ -56,10 +56,10 @@ app.post("/api/login", async (req, res) => {
     const user = await User.findOne({ email });
     if (!user) return res.status(404).json({ message: "User not found." });
 
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = await compare(password, user.password);
     if (!isMatch) return res.status(401).json({ message: "Invalid credentials." });
 
-    const token = jwt.sign({ id: user._id }, "secretkey", { expiresIn: "1h" });
+    const token = sign({ id: user._id }, "secretkey", { expiresIn: "1h" });
 
     res.cookie("token", token, {
         httpOnly: true,
@@ -81,7 +81,7 @@ const auth = (req, res, next) => {
     if (!token) return res.status(401).json({ message: "Unauthorized." });
 
     try {
-        const verified = jwt.verify(token, "secretkey");
+        const verified = verify(token, "secretkey");
         req.user = verified.id;
         next();
     } catch (err) {
